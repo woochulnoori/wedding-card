@@ -1,0 +1,537 @@
+/*
+ * Globals
+ */
+
+@font-face {
+  font-family: "NanumMyeongjo-r";
+  src: url("../font/NanumMyeongjo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumMyeongjo-e";
+  src: url("../font/NanumMyeongjo-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumMyeongjo-b";
+  src: url("../font/NanumMyeongjo-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DancingScript-b";
+  src: url("../font/DancingScript-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MapoFlowerIsland";
+  src: url("../font/MapoFlowerIsland.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MapoFlowerIsland";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("../font/GowunDodum-Regular.ttf") format("truetype");
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 0.05rem solid #fff;
+}
+
+.top-title {
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: white;
+  text-shadow: none;
+  font-family: MapoFlowerIsland;
+  font-size: 2.5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease; /* 투명도 변화를 부드럽게 처리 */
+}
+
+/* 스크롤되었을 때 등장 효과 */
+.top-title.visible {
+  opacity: 1; /* 투명도를 1로 변경하여 보이게 함 */
+}
+
+.top-title-sub {
+  margin-top: 1em;
+  line-height: 0.5;
+  color: white;
+  text-shadow: none;
+  font-family: MapoFlowerIsland;
+  font-size: 1.4rem;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 430px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+.cover-container-2 {
+  max-width: 42em;
+  color: black;
+}
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.cover-heading {
+  margin-top: 7.5rem;
+  color: #fefefe;
+  font-family: DancingScript-b;
+}
+
+.top-div {
+  width: 100%;
+}
+
+header {
+  background-image: url("../img/test/4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+/*
+ * section
+ */
+
+.small-text {
+  font-size: 70%; /* 원하는 크기로 조정하세요 */
+}
+
+.section1-title {
+  margin-top: 1em;
+  color: black;
+  color: #333;
+  text-shadow: none;
+  font-size: 1rem;
+}
+
+.section1-main {
+  background-color: ##f9f9f9;
+  font-family: MapoFlowerIsland;
+  line-height: 2em;
+  font-size: 1rem;
+}
+
+.section1-sub {
+  font-family: MapoFlowerIsland;
+  color: #333333;
+  line-height: 2.1em;
+  font-size: 1.1rem;
+}
+
+.section1-sub2 {
+  font-family: MapoFlowerIsland;
+  line-height: 2.1em;
+  font-size: 1.2rem;
+}
+
+.section1-sub2 .small {
+  font-size: 1.2rem;
+}
+
+.section2-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+  font-family: MapoFlowerIsland;
+}
+
+.section2-main {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  position: relative;
+}
+
+.section2-main::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../img/294A9953.jpg");
+  background-size: cover;
+  background-position: right;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section2-sub {
+  font-family: MapoFlowerIsland;
+  line-height: 2em;
+  font-size: 1.2rem;
+  font-weight: Bold;
+}
+
+.section3 {
+  background-color: #f9f9f9;
+}
+
+.section3-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
+.section3-main {
+  font-family: DancingScript-b;
+  line-height: 1.5em;
+  font-size: 2rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.section3-image {
+  box-shadow: 2px 2px 5px #999;
+}
+
+.section4-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
+.section4-sec1-2 {
+  padding-top: 0.1rem;
+}
+
+.section4-sec1 {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+}
+
+.section4-sec2 {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+}
+
+.section4-sec3 {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  background: none;
+  border: none;
+  color: #55cccc;
+}
+
+.section4-sec3-g {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.35rem;
+  background: none;
+  border: none;
+  color: #ff99cc;
+}
+
+.section5 {
+  background-color: #f9f9f9;
+}
+
+.section5-title {
+  margin-top: 1em;
+  font-family: MapoFlowerIsland;
+  color: #333;
+  text-shadow: none;
+}
+
+.section5-main {
+  font-family: DancingScript-b;
+  line-height: 1.5em;
+  font-size: 2rem;
+}
+
+.section5-sub {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+}
+
+.section5-table {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.section5-table tr td {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.section5-table tr .sun {
+  color: red;
+}
+
+.section5-table tr .check {
+  color: white;
+  background-color: chocolate;
+  border-radius: 30px;
+}
+
+.section5-table tr:first-child td {
+  padding-top: 1em;
+}
+
+.section5-table tr:last-child td {
+  padding-bottom: 1em;
+}
+
+.section6 {
+  background-color: #f9f9f9;
+  font-family: MapoFlowerIsland;
+}
+
+.section6-title {
+  margin-top: 1em;
+  font-family: MapoFlowerIsland;
+  color: #333;
+  text-shadow: none;
+}
+
+.section6-location {
+  color: #333;
+  text-shadow: none;
+}
+
+.section6-main {
+  font-family: DancingScript-b;
+  line-height: 1.5em;
+  font-size: 2rem;
+}
+
+.section6-location-main {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+}
+
+.section6-sub {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.3rem;
+}
+
+.section6-location-sub {
+  font-family: MapoFlowerIsland;
+  line-height: 1.5em;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.section7 {
+  background-color: #ffffff;
+}
+
+.section7-title {
+  margin-top: 1em;
+  font-family: MapoFlowerIsland;
+  color: #333;
+  text-shadow: none;
+}
+
+.section7-modal {
+  color: #333;
+  font-family: MapoFlowerIsland;
+}
+
+.section7-modal-title {
+  font-size: 1.4rem;
+  font-family: MapoFlowerIsland;
+}
+
+.section7-modal-content {
+  font-size: 1rem;
+  font-family: MapoFlowerIsland;
+  font-weight: bold;
+}
+
+.section7-main {
+  font-family: MapoFlowerIsland;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+}
+
+.section7-button {
+  font-family: MapoFlowerIsland;
+  font-size: 1.2rem;
+  background-color: #cc9999;
+  color: #fff;
+  border: 0;
+  border-radius: 50px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.section7-button:hover {
+  background-color: #cc9999;
+  color: #fff;
+  border: 0;
+}
+
+.section7-button:active {
+  background-color: #996666;
+  color: #fff;
+  border: 0;
+}
+
+.section7-button:valid {
+  background-color: #cc9999;
+  color: #fff;
+  border: 0;
+}
+
+.section8 {
+  background-color: #f9f9f9;
+  font-family: MapoFlowerIsland;
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bottom_right {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0px 15px 15px 15px;
+}
+
+.bottom_left {
+  overflow: hidden;
+  position: fixed;
+  text-align: right;
+  bottom: 0;
+  left: 0;
+  margin: 0px 15px 15px 15px;
+}
