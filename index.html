@@ -156,6 +156,14 @@
 
 <!-- 스크립트 수정 -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var videoElement = document.querySelector('video');
+  videoElement.onloadeddata = function() {
+    this.style.opacity = 1; // 비디오 로딩 완료 후 가시성을 높임
+  };
+});
+
+
   var audio = document.getElementById("background-music");
   var musicIcon = document.getElementById("music-icon");
 
@@ -370,10 +378,10 @@
           <div id="videoCarouselControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <video class="d-block w-100" controls>
-                  <source src="wedding_video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <div class="d-block w-100">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/UnANJdUNCzI?si=YWtW3HfB3kzBaqHm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
               </div>
               <!-- Additional videos can be added here with <div class="carousel-item"> if needed -->
             </div>
