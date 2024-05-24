@@ -185,7 +185,7 @@ body {
 }
 
 header {
-  background-image: url("../img/test/main.jpg");
+  background-image: url("../img/resized/main.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -257,7 +257,7 @@ header {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url("../img/294A9953.jpg");
+  background-image: url("../img/resized/294A9953.jpg");
   background-size: cover;
   background-position: right;
   opacity: 0.6;
